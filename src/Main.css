@@ -1,0 +1,16 @@
+.matrix {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  justify-items: center;
+  padding: 20px; /* adding some padding around the grid */
+}
+
+.matrix button {
+  padding: 10px;
+  width: 60px; /* setting a specific width */
+  height: 80px; /* setting a specific height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

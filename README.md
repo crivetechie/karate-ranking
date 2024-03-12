@@ -1,1 +1,2 @@
-# karate-ranking
+# karate-scoring
+karate scoring
