@@ -94,7 +94,7 @@ function NumberInput({
   );
 }
 
-function NumberList({ numbers, onSortClick }) {
+function NumberList({ numbers }) {
   return (
     <div className="number-list">
       <h2>Sorted Numbers:</h2>
@@ -103,9 +103,6 @@ function NumberList({ numbers, onSortClick }) {
           <li key={index}>{number / 10}</li>
         ))}
       </ul>
-      <button className="sort-button" onClick={onSortClick}>
-        Sort
-      </button>
     </div>
   );
 }
@@ -115,11 +112,7 @@ function App() {
   const [currentNumber, setCurrentNumber] = useState(0);
 
   const addNumber = (number) => {
-    setNumbers([...numbers, number * 10]);
-  };
-
-  const sortNumbers = () => {
-    const sortedNumbers = [...numbers].sort((a, b) => b - a);
+    const sortedNumbers = [...numbers, number * 10].sort((a, b) => b - a);
     setNumbers(sortedNumbers);
   };
 
@@ -143,7 +136,7 @@ function App() {
           onClearList={clearList}
           currentNumber={currentNumber}
         />
-        <NumberList numbers={numbers} onSortClick={sortNumbers} />
+        <NumberList numbers={numbers} />
       </div>
     </div>
   );
