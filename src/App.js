@@ -24,18 +24,12 @@ function NumberInput({
     onClearNumber();
   };
 
-  const handleBackspaceClick = () => {
-    setNumber(Math.floor(number / 10));
-  };
-
   // Format current number to always display one decimal digit
   const formattedCurrentNumber = (number / 10).toFixed(1);
 
   return (
     <div className="number-input">
-      <div className="current-number">
-        Current Number: {formattedCurrentNumber}
-      </div>
+      <div className="current-number">{formattedCurrentNumber}</div>
       <div className="button-container">
         <div className="button-row">
           <button className="digit-button" onClick={() => handleNumberClick(7)}>
@@ -82,9 +76,6 @@ function NumberInput({
           </button>
         </div>
         <div className="button-row">
-          <button className="backspace-button" onClick={handleBackspaceClick}>
-            Backspace
-          </button>
           <button className="clear-list-button" onClick={onClearList}>
             Clear List
           </button>
@@ -97,7 +88,7 @@ function NumberInput({
 function NumberList({ numbers }) {
   return (
     <div className="number-list">
-      <h2>Sorted Numbers:</h2>
+      <hr />
       <ul>
         {numbers.map((number, index) => (
           <li key={index}>{number / 10}</li>
@@ -122,7 +113,6 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Number Sorting App</h1>
       <div className="app-content">
         <NumberInput
           onNumberClick={(digit) =>
