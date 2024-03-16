@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import "./App.css"; // Importing CSS for styling
 
-function NumberInput({
-  onNumberClick,
-  onEnterClick,
-  onClearNumber,
-  onClearList,
-  currentNumber,
-}) {
+function NumberInput({ onEnterClick, onClearNumber, onClearList }) {
   const [number, setNumber] = useState(0);
 
   const handleNumberClick = (digit) => {
