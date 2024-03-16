@@ -80,12 +80,24 @@ function NumberInput({ onEnterClick, onClearNumber, onClearList }) {
 }
 
 function NumberList({ numbers }) {
+  const duplicateNumbers = {}; // Object to store count of duplicate numbers
+
+  // Count occurrences of each number
+  numbers.forEach((number) => {
+    duplicateNumbers[number] = (duplicateNumbers[number] || 0) + 1;
+  });
+
   return (
     <div className="number-list">
-      <hr />
+      <h2>Sorted Numbers:</h2>
       <ul>
         {numbers.map((number, index) => (
-          <li key={index}>{number / 10}</li>
+          <li
+            key={index}
+            className={duplicateNumbers[number] >= 2 ? "duplicate-number" : ""}
+          >
+            {number / 10}
+          </li>
         ))}
       </ul>
     </div>

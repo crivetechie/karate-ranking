@@ -1,10 +1,19 @@
 .container {
-  width: 100vw;
-  height: 100vh;
+  width: 100vw; /* 100% of viewport width */
+  height: 100vh; /* 100% of viewport height */
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.app-content {
+  width: 100%; /* Adjust as needed */
+  height: 100%; /* Adjust as needed */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .calculator-container {
@@ -12,7 +21,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 100vw;
 }
 
 .number-input {
@@ -26,18 +35,26 @@
   margin-bottom: 20px;
 }
 
+
 .button-container {
-  display: flex;
-  flex-direction: column;
+  flex-grow: 1; /* Make the button container grow to fill the available space */
 }
 
 .button-row {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around; /* Distribute buttons evenly */
+  margin-bottom: 10px; /* Add some space between button rows */
 }
 
-.digit-button, .backspace-button, .clear-list-button, .enter-button {
+.digit-button {
+  width: 100%;
+  margin: 5px; /* Add some space between buttons */
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+.backspace-button, .clear-list-button, .enter-button {
   font-size: 20px;
   padding: 10px 20px;
   margin: 5px;
@@ -64,4 +81,8 @@
   font-size: 20px;
   padding: 10px 20px;
   margin-top: 10px;
+}
+
+.duplicate-number {
+  color: red; /* Change text color to red */
 }
