@@ -90,16 +90,20 @@ function NumberList({ numbers }) {
   return (
     <div className="number-list">
       <h2>Sorted Numbers:</h2>
-      <ul>
-        {numbers.map((number, index) => (
-          <li
-            key={index}
-            className={duplicateNumbers[number] >= 2 ? "duplicate-number" : ""}
-          >
-            {number / 10}
-          </li>
-        ))}
-      </ul>
+      <div className="number-list-wrapper">
+        <ul className="number-list-ul">
+          {numbers.map((number, index) => (
+            <li
+              key={index}
+              className={
+                duplicateNumbers[number] >= 2 ? "duplicate-number" : ""
+              }
+            >
+              {number / 10}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
