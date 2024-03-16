@@ -54,6 +54,32 @@
   padding: 10px 20px;
 }
 
+.cancel-button {
+  width: 100%;
+  margin: 5px; /* Add some space between buttons */
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: salmon;
+}
+
+.add-button {
+  width: 100%;
+  margin: 5px; /* Add some space between buttons */
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: lightgreen;
+}
+
+.pool-button {
+  width: 100%;
+  margin: 5px; /* Add some space between buttons */
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: lightskyblue;
+}
+
+
+
 .backspace-button, .clear-list-button, .enter-button {
   font-size: 20px;
   padding: 10px 20px;
@@ -73,7 +99,7 @@
 
 .number-list ul li {
   display: inline;
-  font-size: 24px;
+  font-size: 36px;
   margin-right: 10px;
 }
 
@@ -99,3 +125,10 @@
 .duplicate-number {
   color: red; /* Change text color to red */
 }
+
+.number-list-textarea {
+  width: 100%; /* Ensure the textarea occupies 100% width */
+  height: 200px; /* Set the height as needed */
+  resize: vertical; /* Allow vertical resizing */
+}
+

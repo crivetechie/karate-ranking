@@ -59,19 +59,21 @@ function NumberInput({ onEnterClick, onClearNumber, onClearList }) {
           </button>
         </div>
         <div className="button-row">
-          <button className="digit-button" onClick={handleClearNumber}>
-            Clear
-          </button>
           <button className="digit-button" onClick={() => handleNumberClick(0)}>
             0
           </button>
-          <button className="digit-button" onClick={handleEnterClick}>
-            Enter
+        </div>
+        <div className="button-row">
+          <button className="cancel-button" onClick={handleClearNumber}>
+            Cancella
+          </button>
+          <button className="add-button" onClick={handleEnterClick}>
+            Inserisci
           </button>
         </div>
         <div className="button-row">
-          <button className="clear-list-button" onClick={onClearList}>
-            Clear List
+          <button className="pool-button" onClick={onClearList}>
+            Nuova pool
           </button>
         </div>
       </div>
@@ -87,14 +89,20 @@ function NumberList({ numbers }) {
     duplicateNumbers[number] = (duplicateNumbers[number] || 0) + 1;
   });
 
+  // Group numbers into arrays of 5 elements each
+  const groupedNumbers = [];
+  for (let i = 0; i < numbers.length; i += 5) {
+    groupedNumbers.push(numbers.slice(i, i + 5));
+  }
+
   return (
     <div className="number-list">
-      <h2>Sorted Numbers:</h2>
-      <div className="number-list-wrapper">
-        <ul className="number-list-ul">
-          {numbers.map((number, index) => (
+      <h2>Ordine:</h2>
+      {groupedNumbers.map((group, index) => (
+        <ul className="number-list-ul" key={index}>
+          {group.map((number, idx) => (
             <li
-              key={index}
+              key={idx}
               className={
                 duplicateNumbers[number] >= 2 ? "duplicate-number" : ""
               }
@@ -103,7 +111,7 @@ function NumberList({ numbers }) {
             </li>
           ))}
         </ul>
-      </div>
+      ))}
     </div>
   );
 }
