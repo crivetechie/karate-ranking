@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/karate-scoring/static/css/main.5de13e8c.css",
-    "main.js": "/karate-scoring/static/js/main.eba4e19b.js",
-    "index.html": "/karate-scoring/index.html",
-    "main.5de13e8c.css.map": "/karate-scoring/static/css/main.5de13e8c.css.map",
-    "main.eba4e19b.js.map": "/karate-scoring/static/js/main.eba4e19b.js.map"
+    "main.css": "/karate-ranking/static/css/main.5de13e8c.css",
+    "main.js": "/karate-ranking/static/js/main.eba4e19b.js",
+    "index.html": "/karate-ranking/index.html",
+    "main.5de13e8c.css.map": "/karate-ranking/static/css/main.5de13e8c.css.map",
+    "main.eba4e19b.js.map": "/karate-ranking/static/js/main.eba4e19b.js.map"
   },
   "entrypoints": [
     "static/css/main.5de13e8c.css",
