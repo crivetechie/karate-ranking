@@ -6,7 +6,7 @@
     "react",
     "starter"
   ],
-  "homepage": "https://crivetechie.github.io/karate-scoring",
+  "homepage": "https://crivetechie.github.io/karate-ranking",
   "main": "src/index.js",
   "dependencies": {
     "loader-utils": "3.2.1",
