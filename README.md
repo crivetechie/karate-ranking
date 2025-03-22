@@ -1,2 +1,3 @@
-# karate-scoring
-karate scoring
+# karate-ranking
+
+Simple react app to rank pools during a karate competition.
